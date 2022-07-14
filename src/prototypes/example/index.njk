@@ -1,0 +1,18 @@
+---
+group: Examples
+title: Example prototype
+layout: example/views/_master
+---
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% block main %}
+    <h1>Start example prototype</h1>
+    <p>This example prototype contains three question pages and a summary.</p>
+    {{
+        onsButton({
+            "text": "Start",
+            "classes": "ons-u-mt-l",
+            "url": pageInfo.rootPath + "/name.html"
+        })
+    }}
+{% endblock %}

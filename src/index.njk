@@ -1,0 +1,30 @@
+{% from "components/lists/_macro.njk" import onsList %}
+
+{% set pageConfig = { 
+    "title": "ONS Prototypes",
+    "footer": {
+        "OGLLink": {
+            "pre": 'All content is available under the',
+            "link": 'Open Government Licence v3.0',
+            "url": 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
+            "post": ', except where otherwise stated'
+        }
+    }
+} %}
+{% block main %}
+    {% set groups = helpers.navigationHelper({ 
+        "pages": prototypeListing,
+        "ignorePaths": ["/"]
+    }) %}
+    {% for group in groups %}
+        <section>
+            <h1 class="u-fs-m">{{ group.title }}</h1>
+            {{
+                onsList({
+                    "classes": "ons-list--bare",
+                    "itemsList": group.items
+                })
+            }}
+        </section>
+    {% endfor %}
+{% endblock %}

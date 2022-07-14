@@ -1,0 +1,20 @@
+{
+  "name": "prototype-kit-project",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "ONS Digital"
+  },
+  "scripts": {
+    "start": "gulp prototype-kit:start",
+    "watch": "gulp prototype-kit:watch",
+    "build": "yarn tidy-clean && NODE_ENV=production gulp prototype-kit:build",
+    "tidy-clean": "rm -rf build"
+  },
+  "dependencies": {
+    "@ons/prototype-kit": "git+https://github.com/ONSdigital/prototype-kit#v1.0.1",
+    "gulp": "^4.0.2"
+  }
+}

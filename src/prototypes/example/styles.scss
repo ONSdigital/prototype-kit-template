@@ -1,0 +1,21 @@
+/***********************************************************************
+Update the version in the path below to the version being used
+***********************************************************************/
+@import '../../../node_modules/@ons/design-system/scss/vars/_index.scss';
+@import '../../../node_modules/@ons/design-system/scss/helpers/_index.scss';
+@import '../../../node_modules/@ons/design-system/scss/utilities/_index.scss';
+
+/***********************************************************************
+Do not remove. Required for dynamic generation of survey summary page
+***********************************************************************/
+.ons-summary__item:not(:last-child) {
+  border-bottom: 1px solid $color-borders !important;
+}
+
+.js-summary {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+/***********************************************************************/
+/***********************************************************************/

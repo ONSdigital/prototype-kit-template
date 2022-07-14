@@ -1,0 +1,41 @@
+---
+group: Examples
+title: Example prototype
+layout: example/views/_master
+---
+{% from "components/input/_macro.njk" import onsInput %}
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% set prevPage = "age" %}
+{% set form =  {
+    "method": "GET",
+    "attributes": {
+        "action":  pageInfo.rootPath + "/summary.html"
+    }
+} %}
+
+{% block main %}
+    <h1>How much do you earn?</h1>
+    {{
+        onsInput({
+            "id": "prefixed",
+            "type": "number",
+            "width": "6",
+            "autocomplete": "off",
+            "required": true,
+            "label": {
+                "text": "Your annual salary before taxes"
+            },
+            "prefix": {
+                "title": "British pounds (GBP)",
+                "text": "£"
+            }
+        })
+    }}    
+    {{
+        onsButton({
+            "text": "Save and continue",
+            "classes": "ons-u-mt-l"
+        })
+    }}
+{% endblock %}

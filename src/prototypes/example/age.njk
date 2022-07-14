@@ -1,0 +1,61 @@
+---
+group: Examples
+title: Example prototype
+layout: example/views/_master
+---
+{% from "components/date-input/_macro.njk" import onsDateInput %}
+{% from "components/button/_macro.njk" import onsButton %}
+
+{% set prevPage = "name" %}
+{% set form =  {
+    "method": "GET",
+    "attributes": {
+        "action":  pageInfo.rootPath + "/salary.html"
+    }
+} %}
+
+{% block main %}
+    <h1>When were you born?</h1>
+
+    {{
+        onsDateInput({
+            "id": "date",
+            "legendOrLabel": "Date of birth",
+            "description": "For example, 31 3 1980",
+            "day": {
+                "label": {
+                    "text": "Day"
+                },
+                "name": "day",
+                "attributes": {
+                    "autocomplete": "bday-day"
+                }
+            },
+            "month": {
+                "label": {
+                    "text": "Month"
+                },
+                "name": "month",
+                "attributes": {
+                    "autocomplete": "bday-month"
+                }
+            },
+            "year": {
+                "label": {
+                    "text": "Year"
+                },
+                "name": "year",
+                "attributes": {
+                    "autocomplete": "bday-year"
+                }
+            }
+        })
+    }}
+
+    {{
+        onsButton({
+            "text": "Save and continue",
+            "classes": "ons-u-mt-l"
+        })
+    }}
+{% endblock %}
