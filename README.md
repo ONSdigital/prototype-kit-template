@@ -52,3 +52,11 @@ version: 44.0.0
 ---
 <p>This page uses design system version 44.0.0.</p>
 ```
+
+### Custom JavaScript
+
+If you need to add custom JavaScript to your prototype, the build system will automatically look for a file called `index.js` in your prototype. Gulp will convert your JavaScript to ES5 code. You can refer to the example folder to see how to include the JavaScript in your template.
+
+### Custom CSS
+
+If you need to add custom CSS to style a new component or override styling on an existing component you can create a `.scss` file in the directory of your prototype. Gulp will spit out a `.css` file named the same as any `.scss` file that isn't prefixed with an underscore. You can refer to the example folder to see how to include generated css in your template.
