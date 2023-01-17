@@ -9,7 +9,7 @@ Update the version in the path below to the version being used
 Do not remove. Required for dynamic generation of survey summary page
 ***********************************************************************/
 .ons-summary__item:not(:last-child) {
-  border-bottom: 1px solid $color-borders !important;
+  border-bottom: 1px solid var(--ons-color-borders) !important;
 }
 
 .js-summary {
