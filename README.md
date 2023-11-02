@@ -42,6 +42,7 @@ Begin by adding a reference to the specific design system version in the `packag
 "dependencies": {
   "@ons/design-system/66.0.0": "npm:@ons/design-system@66.0.0",
   ...
+}
 ```
 
 And then add the `version` attribute at the top of each Nunjucks template that requires this specific design system version:
