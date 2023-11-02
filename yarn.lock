@@ -148,10 +148,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@ons/design-system@^65.0.0":
-  version "65.0.0"
-  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-65.0.0.tgz#052057e6adb02ab1c66b8ffce3868021f8e6460c"
-  integrity sha512-5khkxMC4RSNUPlM/O4BaqZZB97ntOnDa3+2FPRBbqIp2g5FKeAfgD8zSgiBkUw6RPYBdu678YzYHwwrWA5P9TQ==
+"@ons/design-system@^66.0.1":
+  version "66.0.1"
+  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-66.0.1.tgz#555c84cff3b62098f4366aa38e5cc2936d2d939b"
+  integrity sha512-s+H/kLoR2v7HDOOMFhJtCKEskNR+QP1RCrvkLWEorHcDUZQadyXq/jm/NK/XB8lFRoiQ/segRcF9rYlV5fbMVA==
 
 "@ons/prototype-kit@git+https://github.com/ONSdigital/prototype-kit#v1.0.2":
   version "1.0.1"

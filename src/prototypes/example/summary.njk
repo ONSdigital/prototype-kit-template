@@ -6,12 +6,11 @@ layout: example/views/_master
 {% from "components/panel/_macro.njk" import onsPanel %}
 
 {% set prevPage = "index" %}
-{% set form =  {
-    "method": "GET",
-    "attributes": {
-        "action":  pageInfo.rootPath + "/summary.html"
-    }
-} %}
+{% set formActionURL = pageInfo.rootPath + "/summary.html" %}
+
+{% block bodyStart %}
+    <form class="form-class" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
+{% endblock %}
 
 {% block main %}
     <h1>Submit study</h1>
@@ -37,4 +36,8 @@ layout: example/views/_master
             "text": 'Submit study'
         })
     }}
+{% endblock %}
+
+{% block bodyEnd %}
+    </form>
 {% endblock %}

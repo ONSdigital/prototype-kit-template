@@ -36,11 +36,11 @@ Additional gulp tasks can be added to this project's `gulpfile.js` in the usual 
 
 ## Using a specific version of the design system
 
-Begin by adding a reference to the specific design system version in the `package.json` file of this repository; for example, if version 44.0.0 were required then this would look like this:
+Begin by adding a reference to the specific design system version in the `package.json` file of this repository; for example, if version 66.0.0 were required then this would look like this:
 
 ```json
 "dependencies": {
-  "@ons/design-system/44.0.0": "npm:@ons/design-system@44.0.0",
+  "@ons/design-system/66.0.0": "npm:@ons/design-system@66.0.0",
   ...
 ```
 
@@ -48,9 +48,9 @@ And then add the `version` attribute at the top of each Nunjucks template that r
 
 ```nunjucks
 ---
-version: 44.0.0
+version: 66.0.0
 ---
-<p>This page uses design system version 44.0.0.</p>
+<p>This page uses design system version 66.0.0.</p>
 ```
 
 ### Custom JavaScript

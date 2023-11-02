@@ -1,4 +1,5 @@
 {% extends "layout/_template.njk" %}
+{% from "components/breadcrumbs/_macro.njk" import onsBreadcrumbs %}
 
 {% set pageConfig = {
     "header": {
@@ -13,16 +14,6 @@
             "url": 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
             "post": ', except where otherwise stated'
         }
-    },
-    "breadcrumbs": {
-        "ariaLabel": 'Breadcrumbs',
-        "itemsList": [
-            {
-                "linkClasses": 'js-previous' if prevPage else '',
-                "url": pageInfo.rootPath + "/" + prevPage + '.html',
-                "text": 'Previous'
-            }
-        ]
     }
 } %}
 
@@ -31,6 +22,21 @@
 {% endblock %}
 
 {% block preMain %}
+    {% if prevPage %}
+        {{
+            onsBreadcrumbs({
+                "ariaLabel": 'Back',
+                "itemsList": [
+                    {
+                        "linkClasses": 'js-previous',
+                        "url": pageInfo.rootPath + "/" + prevPage + '.html',
+                        "text": 'Back',
+                        "id": "backlink"
+                    }
+                ]
+            })
+        }}
+    {% endif %}
 {% endblock %}
 
 {% block main %}

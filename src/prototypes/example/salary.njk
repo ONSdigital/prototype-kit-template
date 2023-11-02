@@ -7,12 +7,11 @@ layout: example/views/_master
 {% from "components/button/_macro.njk" import onsButton %}
 
 {% set prevPage = "age" %}
-{% set form =  {
-    "method": "GET",
-    "attributes": {
-        "action":  pageInfo.rootPath + "/summary.html"
-    }
-} %}
+{% set formActionURL = pageInfo.rootPath + "/summary.html" %}
+
+{% block bodyStart %}
+    <form class="form-class" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
+{% endblock %}
 
 {% block main %}
     <h1>How much do you earn?</h1>
@@ -22,20 +21,24 @@ layout: example/views/_master
             "type": "number",
             "width": "6",
             "autocomplete": "off",
-            "required": true,
             "label": {
                 "text": "Your annual salary before taxes"
             },
             "prefix": {
+                "id": "annual-salary-gpb-prefix",
                 "title": "British pounds (GBP)",
                 "text": "£"
             }
         })
-    }}    
+    }}
     {{
         onsButton({
             "text": "Save and continue",
             "classes": "ons-u-mt-l"
         })
     }}
+{% endblock %}
+
+{% block bodyEnd %}
+    </form>
 {% endblock %}
