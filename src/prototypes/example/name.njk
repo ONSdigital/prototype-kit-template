@@ -6,12 +6,9 @@ layout: example/views/_master
 {% from "components/input/_macro.njk" import onsInput %}
 {% from "components/button/_macro.njk" import onsButton %}
 
-{% set form =  {
-    "method": "GET",
-    "attributes": {
-        "action":  pageInfo.rootPath + "/age.html"
-    }
-} %}
+{% block bodyStart %}
+    <form method="GET" action="/prototypes/example/age.html">
+{% endblock %}
 
 {% block main %}
     <h1>What is your name?</h1>
@@ -39,4 +36,9 @@ layout: example/views/_master
             "classes": "ons-u-mt-l"
         })
     }}
+{% endblock %}
+
+{% block bodyEnd %}
+    </form>
+    <script src="/prototypes/example/index.js"></script>
 {% endblock %}
