@@ -7,8 +7,9 @@ layout: example/views/_master
 {% from "components/button/_macro.njk" import onsButton %}
 
 {% set prevPage = "age" %}
+{% set formActionURL = pageInfo.rootPath + "/summary.html" %}
 {% block bodyStart %}
-    <form method="GET" action="/prototypes/example/summary.html">
+    <form method="GET" action="{{formActionURL}}">
 {% endblock %}
 
 {% block main %}
@@ -19,7 +20,6 @@ layout: example/views/_master
         "type": "number",
         "width": "6",
         "autocomplete": "off",
-        "required": true,
         "label": {
             "text": "Your annual salary before taxes"
         },

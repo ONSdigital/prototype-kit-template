@@ -6,8 +6,9 @@ layout: example/views/_master
 {% from "components/panel/_macro.njk" import onsPanel %}
 
 {% set prevPage = "index" %}
+{% set formActionURL = pageInfo.rootPath + "/summary.html" %}
 {% block bodyStart %}
-    <form method="GET" action="/prototypes/example/summary.html">
+    <form method="GET" action="{{formActionURL}}">
 {% endblock %}
 
 {% block main %}

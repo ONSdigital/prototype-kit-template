@@ -7,8 +7,9 @@ layout: example/views/_master
 {% from "components/button/_macro.njk" import onsButton %}
 
 {% set prevPage = "name" %}
+{% set formActionURL = pageInfo.rootPath + "/salary.html" %}
 {% block bodyStart %}
-    <form method="GET" action="/prototypes/example/salary.html">
+    <form method="GET" action="{{formActionURL}}">
 {% endblock %}
 
 {% block main %}
