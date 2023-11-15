@@ -1,11 +1,27 @@
 {% extends "layout/_template.njk" %}
-
+{% set breadCrumbsUrl %}
+{% if prevPage %}
+    {{pageInfo.rootPath}}/{{prevPage}}.html
+{% else %}
+/
+{% endif %}
+{% endset %}
 {% set pageConfig = {
     "header": {
+        "title": "Prototype example",
         "logoHref": '/',
         "titleLogoHref": pageInfo.rootPath + '#0'
     },
-    "title": "Prototype example",
+    "breadcrumbs": {
+        "ariaLabel": 'Breadcrumbs',
+        "itemsList": [
+            {
+                "linkClasses": 'js-previous' if prevPage else '',
+                "url": breadCrumbsUrl | trim ,
+                "text": 'Previous'
+            }
+        ]
+    },
     "footer": {
         "OGLLink": {
             "pre": 'All content is available under the',
@@ -13,28 +29,14 @@
             "url": 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',
             "post": ', except where otherwise stated'
         }
-    },
-    "breadcrumbs": {
-        "ariaLabel": 'Breadcrumbs',
-        "itemsList": [
-            {
-                "linkClasses": 'js-previous' if prevPage else '',
-                "url": pageInfo.rootPath + "/" + prevPage + '.html',
-                "text": 'Previous'
-            }
-        ]
     }
 } %}
 
 {% block head %}
-    <link rel="stylesheet" href="/prototypes/example/styles.css" />
+    <link rel="stylesheet" href="/prototypes/example/styles.css"/>
 {% endblock %}
 
-{% block preMain %}
-{% endblock %}
-
-{% block main %}
-{% endblock %}
+{% block main %}{% endblock %}
 
 {% block bodyEnd %}
     <script src="/prototypes/example/index.js"></script>

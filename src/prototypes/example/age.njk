@@ -7,12 +7,10 @@ layout: example/views/_master
 {% from "components/button/_macro.njk" import onsButton %}
 
 {% set prevPage = "name" %}
-{% set form =  {
-    "method": "GET",
-    "attributes": {
-        "action":  pageInfo.rootPath + "/salary.html"
-    }
-} %}
+{% set formActionURL = pageInfo.rootPath + "/salary.html" %}
+{% block bodyStart %}
+    <form method="GET" action="{{formActionURL}}">
+{% endblock %}
 
 {% block main %}
     <h1>When were you born?</h1>
@@ -58,4 +56,9 @@ layout: example/views/_master
             "classes": "ons-u-mt-l"
         })
     }}
+{% endblock %}
+
+{% block bodyEnd %}
+    </form>
+    <script src="/prototypes/example/index.js"></script>
 {% endblock %}
