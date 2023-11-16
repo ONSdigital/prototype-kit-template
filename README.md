@@ -34,6 +34,15 @@ This project uses [gulp](https://gulpjs.com/) to automate the above commands. Th
 
 Additional gulp tasks can be added to this project's `gulpfile.js` in the usual way. Refer to the gulp documentation for information on how to do this.
 
+## Adding gulp tasks
+
+Some example tasks has been added to the gulp.js file for reference.
+
+Do the following after adding in a task:
+
+1. Go to the package.json file. Under the scripts section, Add in the build script name. for example `"build-static-files": "gulp prototype-kit:build-static-files"`
+2. In your terminal, run "yarn 'build script name'" for example "yarn build-static-files"
+
 ## Using a specific version of the design system
 
 Begin by adding a reference to the specific design system version in the `package.json` file of this repository; for example, if version 44.0.0 were required then this would look like this:
