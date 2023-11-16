@@ -14,7 +14,7 @@
     "tidy-clean": "rm -rf build"
   },
   "dependencies": {
-    "@ons/design-system": "^66.0.1",
+    "@ons/design-system": "^66.0.2",
     "@ons/prototype-kit": "git+https://github.com/ONSdigital/prototype-kit#v1.0.2",
     "gulp": "^4.0.2"
   }

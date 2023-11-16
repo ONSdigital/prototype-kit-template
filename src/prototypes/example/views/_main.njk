@@ -1,12 +1,27 @@
 {% extends "layout/_template.njk" %}
-{% from "components/breadcrumbs/_macro.njk" import onsBreadcrumbs %}
-
+{% set breadCrumbsUrl %}
+{% if prevPage %}
+    {{pageInfo.rootPath}}/{{prevPage}}.html
+{% else %}
+/
+{% endif %}
+{% endset %}
 {% set pageConfig = {
     "header": {
+        "title": "Prototype example",
         "logoHref": '/',
         "titleLogoHref": pageInfo.rootPath + '#0'
     },
-    "title": "Prototype example",
+    "breadcrumbs": {
+        "ariaLabel": 'Breadcrumbs',
+        "itemsList": [
+            {
+                "linkClasses": 'js-previous' if prevPage else '',
+                "url": breadCrumbsUrl | trim,
+                "text": 'Previous'
+            }
+        ]
+    },
     "footer": {
         "OGLLink": {
             "pre": 'All content is available under the',
@@ -18,25 +33,7 @@
 } %}
 
 {% block head %}
-    <link rel="stylesheet" href="/prototypes/example/styles.css" />
-{% endblock %}
-
-{% block preMain %}
-    {% if prevPage %}
-        {{
-            onsBreadcrumbs({
-                "ariaLabel": 'Back',
-                "itemsList": [
-                    {
-                        "linkClasses": 'js-previous',
-                        "url": pageInfo.rootPath + "/" + prevPage + '.html',
-                        "text": 'Back',
-                        "id": "backlink"
-                    }
-                ]
-            })
-        }}
-    {% endif %}
+    <link rel="stylesheet" href="/prototypes/example/styles.css"/>
 {% endblock %}
 
 {% block main %}
