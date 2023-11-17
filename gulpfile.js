@@ -3,9 +3,10 @@ import definePrototypeKitGulpTasks from '@ons/prototype-kit/defineGulpTasks.js';
 
 definePrototypeKitGulpTasks(gulp);
   
-/* You can define specific gulp tasks here. Further instructions are in the README file. */ 
+/* Define specific gulp tasks in this section. Refer to the README file for additional instructions. */ 
+/* Below are examples of tasks you can define */
 
-/* Task to build static files */
+/* Example: Task to build static files */
 // const staticFileExtensions = ['jpg', 'jpeg', 'png', 'gif', 'mp4', 'mpeg'];
 //   gulp.task('prototype-kit:build-static-files', () => {
 //   return gulp
@@ -13,7 +14,7 @@ definePrototypeKitGulpTasks(gulp);
 //     .pipe(gulp.dest('./build'));
 // });
 
-/* Task to build user-defined JS files */
+/* Example: Task to build user-defined JS files */
 //   gulp.task('prototype-kit:build-js', () => {
 //   return gulp
 //     .src('./src/**/*.js')
