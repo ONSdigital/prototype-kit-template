@@ -1,14 +1,15 @@
 ---
 group: Examples
-layout: example/views/_master
+layout: example/views/_main
 ---
 {% from "components/button/_macro.njk" import onsButton %}
 {% from "components/panel/_macro.njk" import onsPanel %}
 
 {% set prevPage = "index" %}
 {% set formActionURL = pageInfo.rootPath + "/summary.html" %}
+
 {% block bodyStart %}
-    <form method="GET" action="{{formActionURL}}">
+    <form class="form-class" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
 {% endblock %}
 
 {% block main %}

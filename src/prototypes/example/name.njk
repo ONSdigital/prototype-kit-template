@@ -1,14 +1,15 @@
 ---
 group: Examples
 title: Example prototype
-layout: example/views/_master
+layout: example/views/_main
 ---
 {% from "components/input/_macro.njk" import onsInput %}
 {% from "components/button/_macro.njk" import onsButton %}
 
 {% set formActionURL = pageInfo.rootPath + "/age.html" %}
+
 {% block bodyStart %}
-    <form method="GET" action="{{formActionURL}}">
+    <form class="form-class" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
 {% endblock %}
 
 {% block main %}

@@ -1,35 +1,36 @@
 ---
 group: Examples
 title: Example prototype
-layout: example/views/_master
+layout: example/views/_main
 ---
 {% from "components/input/_macro.njk" import onsInput %}
 {% from "components/button/_macro.njk" import onsButton %}
 
 {% set prevPage = "age" %}
 {% set formActionURL = pageInfo.rootPath + "/summary.html" %}
+
 {% block bodyStart %}
-    <form method="GET" action="{{formActionURL}}">
+    <form class="form-class" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
 {% endblock %}
 
 {% block main %}
     <h1>How much do you earn?</h1>
-   {{
-    onsInput({
-        "id": "prefixed",
-        "type": "number",
-        "width": "6",
-        "autocomplete": "off",
-        "label": {
-            "text": "Your annual salary before taxes"
-        },
-        "prefix": {
-            "title": "British pounds (GBP)",
-            "text": "£",
-            "id": "annual-salary-gpb-prefix"
-        }
-    })
-    }}  
+    {{
+        onsInput({
+            "id": "prefixed",
+            "type": "number",
+            "width": "6",
+            "autocomplete": "off",
+            "label": {
+                "text": "Your annual salary before taxes"
+            },
+            "prefix": {
+                "id": "annual-salary-gpb-prefix",
+                "title": "British pounds (GBP)",
+                "text": "£"
+            }
+        })
+    }}
     {{
         onsButton({
             "text": "Save and continue",
