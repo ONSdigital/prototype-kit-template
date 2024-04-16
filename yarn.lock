@@ -381,14 +381,14 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ons/design-system@^67.0.3":
-  version "67.0.3"
-  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-67.0.3.tgz#0950a6b8d1338bf2458d27592ff6a7140f344f7b"
-  integrity sha512-ZCRw+CFk/451Ss5ffdCFJlyMs9h+Tb4OBsNhpyUqAEbYubFVTOorK/0DjMnAHjMMzEa0/XTKgiq/5xEW9LR4MQ==
+"@ons/design-system@^70.0.3":
+  version "70.0.3"
+  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-70.0.3.tgz#dd2816b3f27a97c06b667259fb6332ca9371f2be"
+  integrity sha512-q6fsqnK1buvDXGB3a0YZh3V85rtJxTGC5+SWjanYYtlQsGAnwekUq4Ws6nZN2NCGoJLSRjwWACz3TrRv1tg3Sg==
 
-"@ons/prototype-kit@git+https://github.com/ONSdigital/prototype-kit#v1.0.6":
-  version "1.0.5"
-  resolved "git+https://github.com/ONSdigital/prototype-kit#f16ee372432fdda889328e25f23c8bc78acce3be"
+"@ons/prototype-kit@git+https://github.com/ONSdigital/prototype-kit#v1.0.7":
+  version "1.0.6"
+  resolved "git+https://github.com/ONSdigital/prototype-kit#e2696091172b38151b27551a4d55b9f038069571"
   dependencies:
     "@babel/core" "^7.14.6"
     "@babel/eslint-parser" "^7.22.9"

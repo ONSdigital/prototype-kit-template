@@ -10,7 +10,9 @@ layout: example/views/_main
 {% set formActionURL = pageInfo.rootPath + "/salary.html" %}
 
 {% block bodyStart %}
-    <form class="form-class" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
+    {# The 'js-question-no-summary' class has been added to the form to hide this question from the summary. 
+    You can also add 'js-multiple-line-answer' class if you want to return your answers in multiple lines. #}
+    <form class="form-class js-question-no-summary" method="GET" autocomplete="off" novalidate action="{{ formActionURL }}">
 {% endblock %}
 
 {% block main %}
