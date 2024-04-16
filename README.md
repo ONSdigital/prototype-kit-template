@@ -63,6 +63,13 @@ version: 66.0.0
 <p>This page uses design system version 66.0.0.</p>
 ```
 
+## Additional class attributes
+
+Certain functions have been integrated into the form summary to accommodate specific use cases:
+
+- You can hide a question from summary by assigning the "js-question-no-summary" class to the form element on the page.
+- You can return a multi line answer by assigning the "js-multiple-line-answer" class to the form element on the page.
+
 ### Custom JavaScript
 
 If you need to add custom JavaScript to your prototype, the build system will automatically look for a file called `index.js` in your prototype. Gulp will convert your JavaScript to ES5 code. You can refer to the example folder to see how to include the JavaScript in your template.
