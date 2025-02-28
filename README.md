@@ -77,3 +77,9 @@ If you need to add custom JavaScript to your prototype, the build system will au
 ### Custom CSS
 
 If you need to add custom CSS to style a new component or override styling on an existing component you can create a `.scss` file in the directory of your prototype. Gulp will spit out a `.css` file named the same as any `.scss` file that isn't prefixed with an underscore. You can refer to the example folder to see how to include generated css in your template.
+
+### Linking JSON file to the Autosuggest component
+
+ To link the JSON file to the autosuggest component locally, check the example 3 in gulpfile.js file which takes the json files stored in /src/prototypes/example/data folder
+
+ When deploying the prototype, create a new public gist at https://gist.github.com/ and add the Json file using .json extension. Once you create the gist, click on 'raw' button and copy the URL into the autosuggestData param.
