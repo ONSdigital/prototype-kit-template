@@ -22,8 +22,8 @@ definePrototypeKitGulpTasks(gulp);
 // });
 
 /* Example3: Task to link the JSON file to the autosuggest component locally */
-// gulp.task('copy-static-files', () => {
-//   return gulp.src('./src/prototypes/example/data/**/*').pipe(gulp.dest('./build'));
+// gulp.task('copy-json-files', () => {
+//   return gulp.src('./src/**/**/**/*.json').pipe(gulp.dest('./build'));
 //   });
   
-//   gulp.task('build-assets', gulp.series('copy-static-files'));
+//   gulp.task('build-json', gulp.series('copy-json-files'));

@@ -80,6 +80,16 @@ If you need to add custom CSS to style a new component or override styling on an
 
 ### Linking JSON file to the Autosuggest component
 
- To link the JSON file to the autosuggest component locally, check the example 3 in gulpfile.js file which takes the json files stored in /src/prototypes/example/data folder
+ Follow these steps to correctly link the JSON file to the autosuggest component:
 
- When deploying the prototype, create a new public gist at https://gist.github.com/ and add the Json file using .json extension. Once you create the gist, click on 'raw' button and copy the URL into the autosuggestData param.
+1. Place the JSON file inside the `/src/prototypes/example/data/` folder.  
+
+2. Use **Example 3** in `gulpfile.js` to define a new Gulp task, `build-json`, that copies the JSON file to the `build/` folder.  
+
+3. Add `"build-json": "gulp build-json"` to the script section in `package.json`
+
+4. Run the Gulp Task using `yarn build-json`. This ensures that the JSON file is correctly placed in the build/ folder.
+
+5. When using the autosuggest component, ensure that you reference the correct path for the autosuggestData param. The path should be `data/<json-filename>`
+
+ Note-: When deploying the prototype, create a new public gist at https://gist.github.com/ and add the Json file using .json extension. Then, click on 'raw' button and copy the URL into the autosuggestData param.
