@@ -77,3 +77,19 @@ If you need to add custom JavaScript to your prototype, the build system will au
 ### Custom CSS
 
 If you need to add custom CSS to style a new component or override styling on an existing component you can create a `.scss` file in the directory of your prototype. Gulp will spit out a `.css` file named the same as any `.scss` file that isn't prefixed with an underscore. You can refer to the example folder to see how to include generated css in your template.
+
+### Linking JSON file to the Autosuggest component
+
+ Follow these steps to correctly link the JSON file to the autosuggest component:
+
+1. Place the JSON file inside the `/src/prototypes/example/data/` folder.  
+
+2. Use **Example 3** in `gulpfile.js` to define a new Gulp task, `build-json`, that copies the JSON file to the `build/` folder.  
+
+3. Add `"build-json": "gulp build-json"` to the script section in `package.json`
+
+4. Run the Gulp Task using `yarn build-json`. This ensures that the JSON file is correctly placed in the build/ folder.
+
+5. When using the autosuggest component, ensure that you reference the correct path for the autosuggestData param. The path should be `data/<json-filename>`
+
+ Note-: When deploying the prototype, create a new public gist at https://gist.github.com/ and add the Json file using .json extension. Then, click on 'raw' button and copy the URL into the autosuggestData param.
