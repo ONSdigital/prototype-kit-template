@@ -386,9 +386,9 @@
   resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-72.4.0.tgz#51806bcc60e940e48c190ddea23291fd7fc3e410"
   integrity sha512-+wWiC4f8N7Y4yMXEw5y+jDwZ62SXj/QZE1R1Y4KVK7IyzEg89NttDmc0/yPPC/2MfYzmrFwWbVEmPU1Fejs4+g==
 
-"@ons/prototype-kit@git+https://github.com/ONSdigital/prototype-kit#v1.0.7":
+"@ons/prototype-kit@git+https://github.com/ONSdigital/prototype-kit#v1.0.8":
   version "1.0.6"
-  resolved "git+https://github.com/ONSdigital/prototype-kit#e2696091172b38151b27551a4d55b9f038069571"
+  resolved "git+https://github.com/ONSdigital/prototype-kit#c6dcc5c5b4c93834ee3d6672dc7d1823c7fc8322"
   dependencies:
     "@babel/core" "^7.14.6"
     "@babel/eslint-parser" "^7.22.9"
