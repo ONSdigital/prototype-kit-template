@@ -381,10 +381,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ons/design-system@^72.9.2":
-  version "72.9.2"
-  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-72.9.2.tgz#548959490b4a6a78b0064dbc773e3980f00ba6e5"
-  integrity sha512-ADRRaPdCXupEN3My18raOEgWmQuHZFE72xBeyuOWg+9GGNIvYvlkZKMqkJI8h032Ac2LDCYM5tWkMobUCbHEvA==
+"@ons/design-system@^72.10.0":
+  version "72.10.0"
+  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-72.10.0.tgz#ddc518a178c11f77444e4326a47d0314fecfc318"
+  integrity sha512-5Ihr9GSICCqv4a57bOuOrm7dlDABekbnLExII2Eo4WxxgKcaLgPTYVsJWioEVvditvKFSwUl2DyqwIA5PXTLkw==
   dependencies:
     highcharts "^12.1.2"
 
