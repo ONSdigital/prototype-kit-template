@@ -381,10 +381,12 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ons/design-system@^72.4.0":
-  version "72.4.0"
-  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-72.4.0.tgz#51806bcc60e940e48c190ddea23291fd7fc3e410"
-  integrity sha512-+wWiC4f8N7Y4yMXEw5y+jDwZ62SXj/QZE1R1Y4KVK7IyzEg89NttDmc0/yPPC/2MfYzmrFwWbVEmPU1Fejs4+g==
+"@ons/design-system@^72.10.0":
+  version "72.10.0"
+  resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-72.10.0.tgz#ddc518a178c11f77444e4326a47d0314fecfc318"
+  integrity sha512-5Ihr9GSICCqv4a57bOuOrm7dlDABekbnLExII2Eo4WxxgKcaLgPTYVsJWioEVvditvKFSwUl2DyqwIA5PXTLkw==
+  dependencies:
+    highcharts "^12.1.2"
 
 "@ons/prototype-kit@git+https://github.com/ONSdigital/prototype-kit#v1.0.8":
   version "1.0.6"
@@ -3399,6 +3401,11 @@ hasown@^2.0.0:
   integrity sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==
   dependencies:
     function-bind "^1.1.2"
+
+highcharts@^12.1.2:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/highcharts/-/highcharts-12.2.0.tgz#264633af7e815f0f6291c0d570b1da12e323e9de"
+  integrity sha512-UUN+osTP3aeGc4KmoMuWAjzpKif8GYHFozzYI4O8h1ILGof25M/ZGBpXLvgqf1z0LVh7N9eG7i0HnzMfjcR4nA==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
