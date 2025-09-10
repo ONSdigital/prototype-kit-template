@@ -15,7 +15,7 @@ layout: example/views/_main
 {% block main %}
     <h1>Submit study</h1>
     {% call onsPanel({
-            "type": "warn"
+            "variant": 'warn'
         })
     %}
         You must submit this study to complete it
@@ -24,8 +24,7 @@ layout: example/views/_main
     <div class="ons-summary">
         <div class="ons-summary__group">
             <h2 class="ons-summary__group-title">Turnover</h2>
-                <dl id="turnover" class="ons-summary__items js-summary">   
-                </dl>
+            <dl id="turnover" class="ons-summary__items js-summary"></dl>
         </div>
     </div>
 
