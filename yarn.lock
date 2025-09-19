@@ -381,7 +381,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@ons/design-system@^73.0.0":
+"@ons/design-system@73.0.0":
   version "73.0.0"
   resolved "https://registry.yarnpkg.com/@ons/design-system/-/design-system-73.0.0.tgz#4ecab35882d1d95df19585cca39ec4132e5a9c3d"
   integrity sha512-F7cXbOYSZT7q/Nc+pnMas71ZmgqIaTQmvQH64025mMpOSaUYyR/m1xoen8a9u309B7qtfb3hRlIhPuoHWlSCPQ==
@@ -3436,7 +3436,7 @@ gulp-svgo@^2.2.1:
   dependencies:
     svgo "^1.0.0"
 
-gulp@^4.0.2:
+gulp@4.0.2, gulp@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-4.0.2.tgz#543651070fd0f6ab0a0650c6a3e6ff5a7cb09caa"
   integrity sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA==
